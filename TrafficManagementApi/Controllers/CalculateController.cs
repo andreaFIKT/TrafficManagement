@@ -9,25 +9,24 @@ using TrafficManagementApi.Controllers;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
+using Newtonsoft.Json;
 
 namespace TrafficManagementApi.Controllers
 {
     public class CalculateController : BaseController
-    { 
-        
-        [HttpGet]
-        [Route ("api/calculate/calculateRoute/{idStart}/{idEnd}")]
-        public Route calculateRoute(decimal idStart, decimal idEnd)
+    {
+
+        [HttpPost]
+
+        public Route calculateRoute([FromBody] String json)
         {
+            Route insert = JsonConvert.DeserializeObject<Route>(json);
             RouteController routeInstance = new RouteController();
             RouteCrossroadsController routeCrossroadInstance = new RouteCrossroadsController();
             CrossroadParametersController crossroadParametersInstance = new CrossroadParametersController();
             CrossroadPriorityController crossroadPriorityInstance = new CrossroadPriorityController();
             ResultCrossroadController resultCrossroadInstance = new ResultCrossroadController();
             ResultRouteController resultRouteInstance = new ResultRouteController();
-            Route insert = new Route();
-            insert.Id_Start = idStart;
-            insert.Id_End = idEnd;
             List<Route> calculatedRoute = new List<Route>();
             calculatedRoute = routeInstance.GetRoute(insert);
             List<RouteCrossroad> routeCrossroadList = new List<RouteCrossroad>();
