@@ -8,7 +8,7 @@
             return serviceRepository.get([webEndPoint.baseUrl, arr].join(''), config);
         }
         function getDocTypeData() {
-            var arr = 'crossroad/GetData'; //currency/GetData;
+            var arr = 'route/GetRoutes'; //currency/GetData;
             return serviceRepository.get([webEndPoint.baseUrl, arr].join(''), config);
         }
         var service = {
