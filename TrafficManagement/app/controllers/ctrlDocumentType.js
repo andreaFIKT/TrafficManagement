@@ -17,7 +17,7 @@
                     console.log("Server error");
                     //Туке се хендла еррор значи дека на сервер нешто се случило 
                 }
-                vm.docTypeCollection = response.crossroadList;
+                vm.crossroadList = response.crossroadList;
             }, function () {
                 $timeout(function () {
                     ngToast.create({
@@ -30,8 +30,8 @@
 
         angular.extend(vm, {
             promise: null,
-            selectedDocType: null,
-            docTypeCollection: [],
+            selectedCrossroad: null,
+            crossroadList: [],
     });
         //
         activate();

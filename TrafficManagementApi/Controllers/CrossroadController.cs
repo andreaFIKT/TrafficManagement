@@ -37,7 +37,7 @@ namespace TrafficManagementApi.Controllers
                         };
                         response.Id = crossroad.Id;
                         response.Name = crossroad.Name;
-                        crossroadList.Add(crossroad);
+                        crossroadList.Add(response);
                     }
                     con.Close();
                 }
