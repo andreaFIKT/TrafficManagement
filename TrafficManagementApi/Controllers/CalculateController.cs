@@ -8,21 +8,23 @@ using TrafficManagementApi.Models;
 using TrafficManagementApi.Controllers;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace TrafficManagementApi.Controllers
 {
     public class CalculateController : BaseController
-    {
-        RouteController routeInstance = new RouteController();
-        RouteCrossroadsController routeCrossroadInstance = new RouteCrossroadsController();
-        CrossroadParametersController crossroadParametersInstance = new CrossroadParametersController();
-        CrossroadPriorityController crossroadPriorityInstance = new CrossroadPriorityController();
-        ResultCrossroadController resultCrossroadInstance = new ResultCrossroadController();
-        ResultRouteController resultRouteInstance = new ResultRouteController();
+    { 
         
-
+        [HttpGet]
+        [Route ("api/calculate/calculateRoute/{idStart}/{idEnd}")]
         public Route calculateRoute(decimal idStart, decimal idEnd)
         {
+            RouteController routeInstance = new RouteController();
+            RouteCrossroadsController routeCrossroadInstance = new RouteCrossroadsController();
+            CrossroadParametersController crossroadParametersInstance = new CrossroadParametersController();
+            CrossroadPriorityController crossroadPriorityInstance = new CrossroadPriorityController();
+            ResultCrossroadController resultCrossroadInstance = new ResultCrossroadController();
+            ResultRouteController resultRouteInstance = new ResultRouteController();
             Route insert = new Route();
             insert.Id_Start = idStart;
             insert.Id_End = idEnd;
@@ -63,6 +65,48 @@ namespace TrafficManagementApi.Controllers
             bestRoute = routeInstance.GetRouteById(route.Id_Route);
           
             return bestRoute;
+        }
+
+        [HttpGet]
+        public List<Crossroad> GetData()
+        {
+            var conn = ConfigurationManager.ConnectionStrings[ConnectionStringName()].ConnectionString;
+            var crossroadList = new List<Crossroad>();
+            var response = new Crossroad
+            {
+                Status = ResponseStatus.Success,
+            };
+
+            try
+            {
+                using (var con = new SqlConnection(conn))
+                {
+                    var command = new SqlCommand("USP_Crossroad_SelectAll", con) { CommandType = CommandType.StoredProcedure };
+                    con.Open();
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        var crossroad = new Crossroad
+                        {
+                            Status = ResponseStatus.Success,
+                            Id = Convert.ToDecimal(reader["Id"]),
+                            Name = reader["Name_crossroad"].ToString(),
+                        };
+                        response.Id = crossroad.Id;
+                        response.Name = crossroad.Name;
+                        crossroadList.Add(crossroad);
+                    }
+                    con.Close();
+                }
+                return crossroadList;
+            }
+            catch (Exception ex)
+            {
+                response.Status = ResponseStatus.Error;
+                response.Message = "RequestFailed";
+                crossroadList.Add(response);
+                return crossroadList;
+            }
         }
 
     }

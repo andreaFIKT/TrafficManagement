@@ -14,3 +14,4 @@ C:\Users\Andrea\Documents\TrafficManagement\TrafficManagement\bin\TrafficManagem
 C:\Users\Andrea\Documents\TrafficManagement\TrafficManagement\bin\TrafficManagement.pdb
 C:\Users\Andrea\Documents\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.dll
 C:\Users\Andrea\Documents\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.pdb
+C:\Users\Andrea\Documents\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.csprojResolveAssemblyReference.cache
