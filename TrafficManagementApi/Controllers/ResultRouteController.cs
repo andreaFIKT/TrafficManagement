@@ -31,7 +31,7 @@ namespace TrafficManagementApi.Controllers
             catch (Exception ex)
             {
                 response.Status = ResponseStatus.Error;
-                response.Message = "RequestFailed";
+                response.Message = ex.Data.ToString();
                 return response;
             }
         }

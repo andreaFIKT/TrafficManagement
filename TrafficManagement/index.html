@@ -30,10 +30,11 @@
                             </label>
                             <div class="col-sm-9">
                                 <select class="form-control" id="documentTypeInput"
-                                        ng-options="option.Id_Start for option in ctrl.crossroadList track by option.Id"
-                                        ng-model="ctrl.selectedCrossroad">
-                                    <!--<option value="{{option.Id}}">{{option.Id_Start}}</option>-->
-                                    <option value="{{option.Id}}">{{option.Id_Start}}</option>
+                                        ng-model="ctrl.selectedCrossroad"
+                                        ng-options="option.Id_Start for option in ctrl.routeStarts track by option.Id_Start"
+                                       >
+                                    <!--<option value="{{option.Id_Start}}">{{option.Id_Start}}</option>-->
+                                    <option value="{{option.Id_Start}}">{{option.Id_Start}}</option>
                                 </select>
                             </div>
                         </div>
@@ -43,9 +44,10 @@
                             </label>
                             <div class="col-sm-9">
                                 <select class="form-control" id="documentTypeInput"
-                                        ng-options="option.Id_End for option in ctrl.crossroadList track by option.Id"
-                                        ng-model="ctrl.selectedCrossroad">
-                                    <option value="{{option.Id}}">{{option.Id_End}}</option>
+                                        ng-model="ctrl.selectedCrossroad"
+                                        ng-options="option.Id_End for option in ctrl.routeEnds track by option.Id_End"
+                                        >
+                                    <option value="{{option.Id_End}}">{{option.Id_End}}</option>
                                     <option></option>
 
                                 </select>

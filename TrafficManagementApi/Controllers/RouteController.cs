@@ -122,7 +122,7 @@ namespace TrafficManagementApi.Controllers
                             Id_End = Convert.ToDecimal(reader["Id_end"])
                         };
                         response.Id_End = route.Id_End;
-                        endsList.Add(response);
+                        endsList.Add(route);
                     }
                     con.Close();
                 }
@@ -161,10 +161,12 @@ namespace TrafficManagementApi.Controllers
                             Id_Start = Convert.ToDecimal(reader["Id_start"])
                         };
                         response.Id_Start = route.Id_Start;
-                        startsList.Add(response);
+                        Console.WriteLine(route.Id_Start);
+                        startsList.Add(route);
                     }
                     con.Close();
                 }
+                
                 return startsList;
             }
             catch (Exception ex)

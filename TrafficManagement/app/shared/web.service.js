@@ -7,13 +7,18 @@
             var arr = 'името-на-контролерот/акцијата'; //currency/GetData;
             return serviceRepository.get([webEndPoint.baseUrl, arr].join(''), config);
         }
-        function getDocTypeData() {
-            var arr = 'route/GetRoutes'; //currency/GetData;
+        function getRouteStarts() {
+            var arr = 'route/GetStarts'; //currency/GetData;
+            return serviceRepository.get([webEndPoint.baseUrl, arr].join(''), config);
+        }
+        function getRouteEnds() {
+            var arr = 'route/GetEnds'; //currency/GetData;
             return serviceRepository.get([webEndPoint.baseUrl, arr].join(''), config);
         }
         var service = {
             getData: getData,
-            getDocTypeData: getDocTypeData
+            getRouteStarts: getRouteStarts,
+            getRouteEnds: getRouteEnds
         }
         return service;
     }

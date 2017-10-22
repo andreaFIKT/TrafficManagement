@@ -7,6 +7,5 @@ C:\Users\Andrea\Desktop\ASP.NET Apps\TrafficManagement\TrafficManagement\obj\Deb
 C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\bin\TrafficManagement.dll.config
 C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\bin\TrafficManagement.dll
 C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\bin\TrafficManagement.pdb
-C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.csprojResolveAssemblyReference.cache
 C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.dll
 C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.pdb

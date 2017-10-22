@@ -2,22 +2,40 @@
 (function () {
     'use strict';
 
-    function ctrlDocumentType( $rootScope, $location, webService, $timeout) {
+    function ctrlDocumentType($rootScope, $location, webService, $timeout) {
         var vm = this;
 
         function activate() {
-            getDocumentTypeData();
-            
+            getRouteStarts();
+            getRouteEnds();
+
         }
-        
-        function getDocumentTypeData() {
-            vm.promise = webService.getDocTypeData();
+
+        function getRouteStarts() {
+            vm.promise = webService.getRouteStarts();
             vm.promise.then(function (response) {
                 if (response.Status === 0) {
                     console.log("Server error");
                     //Туке се хендла еррор значи дека на сервер нешто се случило 
                 }
-                vm.crossroadList = response.crossroadList;
+                vm.routeStarts = response//.routeList;
+            }, function () {
+                $timeout(function () {
+                    ngToast.create({
+                        className: 'danger',
+                        content: $translate.instant('RequestFailed')
+                    });
+                }, 0);
+            });
+        }
+        function getRouteEnds() {
+            vm.promise = webService.getRouteEnds();
+            vm.promise.then(function (response) {
+                if (response.Status === 0) {
+                    console.log("Server error");
+                    //Туке се хендла еррор значи дека на сервер нешто се случило 
+                }
+                vm.routeEnds = response//.routeList;
             }, function () {
                 $timeout(function () {
                     ngToast.create({
@@ -29,14 +47,15 @@
         }
 
         angular.extend(vm, {
-            promise: null,
+            //  promise: null,
             selectedCrossroad: null,
-            crossroadList: [],
-    });
+            routeStarts: [],
+            routeEnds:[]
+        });
         //
         activate();
     }
 
     angular.module('app').controller('ctrlDocumentType', ctrlDocumentType);
-    ctrlDocumentType.$inject = [ '$rootScope', '$location', 'webService', '$timeout'];
-})()
+    ctrlDocumentType.$inject = ['$rootScope', '$location', 'webService', '$timeout'];
+})();
