@@ -57,13 +57,16 @@
                     <div class="col-md-6">
                         <div style="margin:70px 100px 50px 50px">
                             <button type="button" style=" width: 100px" class="btn btn-success btn-md pull-right " ng-click="ctrl.calculateRoute(ctrl.selectedIdStart.Id_Start,ctrl.selectedIdEnd.Id_End)">Пресметај</button>
-                            <p>{{ctrl.selectedIdStart.Id_Start}}</p>
-                            <p>{{ctrl.route}}</p>
                         </div>
+                    </div>
+                    <div class="col-md-8" style="margin-left:2vw">
+                        <p>Најприкладна рута е: {{ctrl.route.Name}} со почеток во точка {{ctrl.route.Id_Start}} и крај во точка {{ctrl.route.Id_End}} </p>
+                        <img src="tm.png" />
                     </div>
                 </div>
             </fieldset>
         </form>
+       
 
 
        

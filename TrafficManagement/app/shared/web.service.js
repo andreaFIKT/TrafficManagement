@@ -16,15 +16,8 @@
             return serviceRepository.get([webEndPoint.baseUrl, arr].join(''), config);
         }
         function calculateRoute(idStart, idEnd) {
-            var params = {
-               
-                    "Id": 0,
-                    "Name": '',
-                    "Id_Start": idStart,
-                    "Id_End": idEnd 
-            }
             var arr = 'calculate/calculateRoute';
-            return serviceRepository.post([webEndPoint.baseUrl,arr,'/' + params].join(''), config);
+            return serviceRepository.get([webEndPoint.baseUrl,arr,'/' +idStart+'/' +idEnd +'/'].join(''), config);
         }
         var service = {
             getData: getData,

@@ -149,6 +149,7 @@
     <Content Include="scripts\jQuery\jquery-3.1.0.min.js" />
     <Content Include="scripts\jQuery\jquery-3.1.0.slim.js" />
     <Content Include="scripts\jQuery\jquery-3.1.0.slim.min.js" />
+    <Content Include="tm.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

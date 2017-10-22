@@ -16,11 +16,13 @@ namespace TrafficManagementApi.Controllers
     public class CalculateController : BaseController
     {
 
-        [HttpPost]
+        [HttpGet]
 
-        public Route calculateRoute([FromBody] String json)
+        public Route calculateRoute(decimal idStart, decimal idEnd)
         {
-            Route insert = JsonConvert.DeserializeObject<Route>(json);
+            Route insert = new Route();
+            insert.Id_Start = idStart;
+            insert.Id_End = idEnd;
             RouteController routeInstance = new RouteController();
             RouteCrossroadsController routeCrossroadInstance = new RouteCrossroadsController();
             CrossroadParametersController crossroadParametersInstance = new CrossroadParametersController();
