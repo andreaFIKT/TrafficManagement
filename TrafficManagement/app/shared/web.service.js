@@ -15,10 +15,15 @@
             var arr = 'route/GetEnds'; //currency/GetData;
             return serviceRepository.get([webEndPoint.baseUrl, arr].join(''), config);
         }
+        function calculateRoute(idStart, idEnd) {
+            var arr = 'calculate/calculateRoute';
+            return serviceRepository.get([webEndPoint.baseUrl, arr,'?Id_start=' + idStart +'&Id_end=' + idEnd].join(''), config);
+        }
         var service = {
             getData: getData,
             getRouteStarts: getRouteStarts,
-            getRouteEnds: getRouteEnds
+            getRouteEnds: getRouteEnds,
+            calculateRoute: calculateRoute
         }
         return service;
     }

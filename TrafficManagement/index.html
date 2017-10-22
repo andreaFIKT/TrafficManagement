@@ -30,7 +30,7 @@
                             </label>
                             <div class="col-sm-9">
                                 <select class="form-control" id="documentTypeInput"
-                                        ng-model="ctrl.selectedCrossroad"
+                                        ng-model="ctrl.selectedIdStart"
                                         ng-options="option.Id_Start for option in ctrl.routeStarts track by option.Id_Start"
                                        >
                                     <!--<option value="{{option.Id_Start}}">{{option.Id_Start}}</option>-->
@@ -44,7 +44,7 @@
                             </label>
                             <div class="col-sm-9">
                                 <select class="form-control" id="documentTypeInput"
-                                        ng-model="ctrl.selectedCrossroad"
+                                        ng-model="ctrl.selectedIdEnd"
                                         ng-options="option.Id_End for option in ctrl.routeEnds track by option.Id_End"
                                         >
                                     <option value="{{option.Id_End}}">{{option.Id_End}}</option>
@@ -56,7 +56,9 @@
                     </div>
                     <div class="col-md-6">
                         <div style="margin:70px 100px 50px 50px">
-                            <button type="button" style=" width: 100px" class="btn btn-success btn-md pull-right ">Пресметај</button>
+                            <button type="button" style=" width: 100px" class="btn btn-success btn-md pull-right " ng-click="ctrl.calculateRoute(ctrl.selectedIdStart.Id_Start,ctrl.selectedIdEnd.Id_End)">Пресметај</button>
+                            <p>{{ctrl.selectedIdStart.Id_Start}}</p>
+                            <p>{{ctrl.route}}</p>
                         </div>
                     </div>
                 </div>

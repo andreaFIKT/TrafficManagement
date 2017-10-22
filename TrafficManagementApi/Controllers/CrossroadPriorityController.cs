@@ -11,11 +11,11 @@ namespace TrafficManagementApi.Controllers
     public class CrossroadPriorityController : BaseController
     {
         [HttpGet]
-        public ResultCrossroad GetData()
+        public Priority GetData(String idTraffic, String idPollution)
         {
             var conn = ConfigurationManager.ConnectionStrings[ConnectionStringName()].ConnectionString;
-            var crossroadPriority = new ResultCrossroad();
-            var response = new ResultCrossroad
+            var crossroadPriority = new Priority();
+            var response = new Priority
             {
                 Status = ResponseStatus.Success,
             };
@@ -24,16 +24,25 @@ namespace TrafficManagementApi.Controllers
                 using (var con = new SqlConnection(conn))
                 {
                     var command = new SqlCommand("USP_CrossroadPriority_Select", con) { CommandType = CommandType.StoredProcedure };
+                    command.Parameters.AddWithValue("@Id_traffic", idTraffic);
+                    command.Parameters.AddWithValue("@Id_pollution", idPollution);
                     con.Open();
                     var reader = command.ExecuteReader();
                     while (reader.Read())
                     {
-                        var priority = new ResultCrossroad
+                        var priority = new Priority
                         {
                             Status = ResponseStatus.Success,
-                            Id_Priority = Convert.ToInt32(reader["Value_priority"]),
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Id_Pollution = reader["Id_pollution"].ToString(),
+                            Id_TrafficCongestion = reader["Id_traffic"].ToString(),
+                            PriorityValue = Convert.ToInt32(reader["Value_priority"])
                         };
-                        response.Id_Priority = priority.Id_Priority;
+                        response.Id = priority.Id;
+                        response.Id_Pollution = priority.Id_Pollution;
+                        response.Id_TrafficCongestion = priority.Id_TrafficCongestion;
+                        response.PriorityValue = priority.PriorityValue;
+
                     }
                     con.Close();
                 }

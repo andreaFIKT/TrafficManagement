@@ -11,7 +11,7 @@ namespace TrafficManagementApi.Controllers
     public class RouteCrossroadsController : BaseController
     {
         [HttpGet]
-        public List<RouteCrossroad> GetData()
+        public List<RouteCrossroad> GetData(Route route)
         {
             List<RouteCrossroad> routeCrossroadList = new List<RouteCrossroad>();
             var conn = ConfigurationManager.ConnectionStrings[ConnectionStringName()].ConnectionString;
@@ -24,7 +24,9 @@ namespace TrafficManagementApi.Controllers
                 using (var con = new SqlConnection(conn))
                 {
                     var command = new SqlCommand("USP_RouteCrosroads_Select", con) { CommandType = CommandType.StoredProcedure };
+                    command.Parameters.AddWithValue("@Id_route", route.Id);
                     con.Open();
+                   
                     var reader = command.ExecuteReader();
                     while (reader.Read())
                     {

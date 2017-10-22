@@ -127,6 +127,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CalculateController.cs" />
     <Compile Include="Controllers\CrossroadController.cs" />
     <Compile Include="Controllers\CrossroadParametersController.cs" />
     <Compile Include="Controllers\CrossroadPriorityController.cs" />

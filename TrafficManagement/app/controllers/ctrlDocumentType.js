@@ -46,11 +46,28 @@
             });
         }
 
+        function calculateRoute(idStart, idEnd) {
+            vm.promise = webService.calculateRoute(idStart, idEnd);
+            vm.promise.then(function (response) {
+                if (response.Status === 0) {
+                    console.log("Server error");
+                }
+                vm.route = response;
+            }, function () {
+                $timeout(function () {
+                    ngToast.create({
+                        className: 'danger',
+                        content: $translate.instant('RequestFailed')
+                    });
+                }, 0);
+            });
+
+        }
+
         angular.extend(vm, {
-            //  promise: null,
-            selectedCrossroad: null,
             routeStarts: [],
-            routeEnds:[]
+            routeEnds: [],
+            calculateRoute: calculateRoute               
         });
         //
         activate();

@@ -11,7 +11,7 @@ namespace TrafficManagementApi.Controllers
     public class CrossroadParametersController : BaseController
     {
         [HttpGet]
-        public CrossroadParameters GetData()
+        public CrossroadParameters GetData(float idCrossroad)
         {
             var conn = ConfigurationManager.ConnectionStrings[ConnectionStringName()].ConnectionString;
             var response = new CrossroadParameters
@@ -24,6 +24,7 @@ namespace TrafficManagementApi.Controllers
                 using (var con = new SqlConnection(conn))
                 {
                     var command = new SqlCommand("USP_Crossroad_SelectAll", con) { CommandType = CommandType.StoredProcedure };
+                    command.Parameters.AddWithValue("@Id_crossroad", idCrossroad);
                     con.Open();
                     var reader = command.ExecuteReader();
                     while (reader.Read())
