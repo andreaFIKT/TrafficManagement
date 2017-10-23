@@ -19,8 +19,8 @@ namespace TrafficManagementApi.Controllers
                 using (var con = new SqlConnection(conn))
                 {
                     var command = new SqlCommand("USP_ResultRoute_Insert", con) { CommandType = CommandType.StoredProcedure };
-                    command.Parameters.AddWithValue("@Id_crossroad", response.Id_Route);
-                    command.Parameters.AddWithValue("@Id_priority", response.Route_Priority);
+                    command.Parameters.AddWithValue("@Id_route", response.Id_Route);
+                    command.Parameters.AddWithValue("@Route_priority", response.Route_Priority);
                     command.Parameters.AddWithValue("@Date", response.Date);
                     con.Open();
                     command.ExecuteNonQuery();
