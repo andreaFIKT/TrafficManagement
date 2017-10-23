@@ -21,26 +21,26 @@ namespace TrafficManagementApi.Controllers
 
         public Route calculateRoute(decimal idStart, decimal idEnd)
         {
-            Debug.Write("calculateRoute method hit");
-            Debug.Write("idStart" + idStart.ToString());
-            Debug.Write("idEnd" + idEnd.ToString());
             Route insert = new Route();
             insert.Id_Start = idStart;
             insert.Id_End = idEnd;
+            //controller instance
             RouteController routeInstance = new RouteController();
             RouteCrossroadsController routeCrossroadInstance = new RouteCrossroadsController();
             CrossroadParametersController crossroadParametersInstance = new CrossroadParametersController();
             CrossroadPriorityController crossroadPriorityInstance = new CrossroadPriorityController();
             ResultCrossroadController resultCrossroadInstance = new ResultCrossroadController();
             ResultRouteController resultRouteInstance = new ResultRouteController();
-            List<Route> calculatedRoute = new List<Route>();
-            calculatedRoute = routeInstance.GetRoute(insert);
-            List<RouteCrossroad> routeCrossroadList = new List<RouteCrossroad>();
+            //result route lists
+            List<Route> calculatedRoute = new List<Route>();          
             List<ResultRoute> allRoutesPriorities = new List<ResultRoute>();
-            foreach(Route ruta in calculatedRoute)
+            calculatedRoute = routeInstance.GetRoute(insert);
+            foreach (Route ruta in calculatedRoute)
             {
-                routeCrossroadList = routeCrossroadInstance.GetData(ruta);
+                //result crossroad lists
+                List<RouteCrossroad> routeCrossroadList = new List<RouteCrossroad>();
                 List<int> routePriorityList = new List<int>();
+                routeCrossroadList = routeCrossroadInstance.GetData(ruta);                
                 foreach (var item in routeCrossroadList)
                 {
                     var parameters = crossroadParametersInstance.GetData(item.Id_Crossroad);
@@ -49,7 +49,7 @@ namespace TrafficManagementApi.Controllers
                     ResultCrossroad res = new ResultCrossroad();
                     res.Id_Crossroad = item.Id_Crossroad;
                     res.Id_Priority = priority.Id;
-                    res.Date = DateTime.Now;
+                    res.Date = DateTime.Now.Date;
                     resultCrossroadInstance.AddResult(res);
                 }
                 var sum = 0;
@@ -60,7 +60,7 @@ namespace TrafficManagementApi.Controllers
                 ResultRoute resRoute = new ResultRoute();
                 resRoute.Id_Route = ruta.Id;
                 resRoute.Route_Priority = sum;
-                resRoute.Date = DateTime.Now;
+                resRoute.Date = DateTime.Now.Date;
                 resultRouteInstance.AddResult(resRoute);
                 allRoutesPriorities.Add(resRoute);
             }
