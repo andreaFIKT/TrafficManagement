@@ -10,6 +10,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace TrafficManagementApi.Controllers
 {
@@ -20,6 +21,9 @@ namespace TrafficManagementApi.Controllers
 
         public Route calculateRoute(decimal idStart, decimal idEnd)
         {
+            Debug.Write("calculateRoute method hit");
+            Debug.Write("idStart" + idStart.ToString());
+            Debug.Write("idEnd" + idEnd.ToString());
             Route insert = new Route();
             insert.Id_Start = idStart;
             insert.Id_End = idEnd;

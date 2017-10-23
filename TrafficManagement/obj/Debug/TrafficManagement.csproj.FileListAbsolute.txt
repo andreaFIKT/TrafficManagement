@@ -4,15 +4,14 @@ C:\Users\Andrea\Desktop\ASP.NET Apps\TrafficManagement\TrafficManagement\bin\Tra
 C:\Users\Andrea\Desktop\ASP.NET Apps\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.dll
 C:\Users\Andrea\Desktop\ASP.NET Apps\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.pdb
 C:\Users\Andrea\Desktop\ASP.NET Apps\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.csprojResolveAssemblyReference.cache
-C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\bin\TrafficManagement.dll.config
-C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\bin\TrafficManagement.dll
-C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\bin\TrafficManagement.pdb
-C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.dll
-C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.pdb
 C:\Users\Andrea\Documents\TrafficManagement\TrafficManagement\bin\TrafficManagement.dll.config
 C:\Users\Andrea\Documents\TrafficManagement\TrafficManagement\bin\TrafficManagement.dll
 C:\Users\Andrea\Documents\TrafficManagement\TrafficManagement\bin\TrafficManagement.pdb
 C:\Users\Andrea\Documents\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.csprojResolveAssemblyReference.cache
 C:\Users\Andrea\Documents\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.dll
 C:\Users\Andrea\Documents\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.pdb
-C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.csprojResolveAssemblyReference.cache
+C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\bin\TrafficManagement.dll.config
+C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\bin\TrafficManagement.dll
+C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\bin\TrafficManagement.pdb
+C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.dll
+C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.pdb

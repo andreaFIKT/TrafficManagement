@@ -22,7 +22,7 @@
 
         <form ng-controller="ctrlDocumentType as ctrl">
             <fieldset class="col-lg-10 col-lg-offset-1">
-                <div class="container" style="margin: 20px 0px 20px 0px; padding: 30px ; background-color: lightblue ">
+                <div class="container" style="width:90%; padding:30px; background-color: lightblue">
                     <div class="col-md-6">
                         <div class="form-group row">
                             <label class="col-sm-3 control-label">
@@ -54,14 +54,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div style="margin:70px 100px 50px 50px">
-                            <button type="button" style=" width: 100px" class="btn btn-success btn-md pull-right " ng-click="ctrl.calculateRoute(ctrl.selectedIdStart.Id_Start,ctrl.selectedIdEnd.Id_End)">Пресметај</button>
-                        </div>
+                    <div class="col-md-6" style="float:left; padding:30px 100px; text-align:center;">
+                        <!--<div style="margin:70px 100px 50px 50px">-->
+                            <button type="button" style="width: 100px;"  class="btn btn-success" ng-click="ctrl.calculateRoute(ctrl.selectedIdStart.Id_Start,ctrl.selectedIdEnd.Id_End)">Пресметај</button>
+                       <!-- </div> -->
                     </div>
-                    <div class="col-md-8" style="margin-left:2vw">
-                        <p>Најприкладна рута е: {{ctrl.route.Name}} со почеток во точка {{ctrl.route.Id_Start}} и крај во точка {{ctrl.route.Id_End}} </p>
-                        <img src="tm.png" />
+                    <div class="col-md-8" style="width:100%; float:left;">
+                        <p style="width:100%; text-align:center;">Најприкладна рута е: {{ctrl.route.Name}} со почеток во точка {{ctrl.route.Id_Start}} и крај во точка {{ctrl.route.Id_End}} </p>
+                       
+                        <img src="tm.png" style="width:100%; margin:0 auto;">
                     </div>
                 </div>
             </fieldset>
