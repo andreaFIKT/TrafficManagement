@@ -2,23 +2,21 @@
 (function () {
     'use strict';
 
-    function ctrlDocumentType($rootScope, $location,$http, webService, $timeout) {
+    function ctrlDocumentType($rootScope, $location, webService, $timeout) {
         var vm = this;
 
         function activate() {
             getRouteStarts();
             getRouteEnds();
-
         }
 
         function getRouteStarts() {
             vm.promise = webService.getRouteStarts();
             vm.promise.then(function (response) {
                 if (response.Status === 0) {
-                    console.log("Server error");
-                    //Туке се хендла еррор значи дека на сервер нешто се случило 
+                    console.log("Server error"); 
                 }
-                vm.routeStarts = response//.routeList;
+                vm.routeStarts = response
             }, function () {
                 $timeout(function () {
                     ngToast.create({
@@ -33,9 +31,8 @@
             vm.promise.then(function (response) {
                 if (response.Status === 0) {
                     console.log("Server error");
-                    //Туке се хендла еррор значи дека на сервер нешто се случило 
                 }
-                vm.routeEnds = response//.routeList;
+                vm.routeEnds = response
             }, function () {
                 $timeout(function () {
                     ngToast.create({
@@ -75,5 +72,5 @@
     }
 
     angular.module('app').controller('ctrlDocumentType', ctrlDocumentType);
-    ctrlDocumentType.$inject = ['$rootScope', '$location', '$http','webService', '$timeout'];
+    ctrlDocumentType.$inject = ['$rootScope', '$location','webService', '$timeout'];
 })();
