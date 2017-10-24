@@ -7,12 +7,9 @@ namespace TrafficManagementApi.Models
 {
     public class TrafficCongestion
     {
-        public string Id { get; set; }
-
-        public string Description { get; set; }
-
-        public float Minimum { get; set; }
-
-        public float Maximum { get; set; }
+        public String Id { get; set; }
+        public String Description { get; set; }
+        public decimal Minimum { get; set; }
+        public decimal Maximum { get; set; }
     }
 }

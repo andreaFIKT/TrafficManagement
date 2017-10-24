@@ -8,7 +8,6 @@ namespace TrafficManagementApi.Models
     public class Crossroad: BaseResponse 
     {
         public decimal Id { get; set; }
-
-        public string Name { get; set; }
+        public String Name { get; set; }
     }
 }

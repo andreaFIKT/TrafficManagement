@@ -8,11 +8,8 @@ namespace TrafficManagementApi.Models
     public class RouteCrossroad: BaseResponse
     {
         public int Id { get; set; }
-
         public int Id_Route { get; set; }
-
-        public float Id_Crossroad { get; set; }
-
-        public string Crossroad_Order { get; set; }
+        public decimal Id_Crossroad { get; set; }
+        public int Crossroad_Order { get; set; }
     }
 }

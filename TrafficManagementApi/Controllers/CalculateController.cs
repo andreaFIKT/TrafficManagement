@@ -1,16 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using TrafficManagementApi.Models;
-using TrafficManagementApi.Controllers;
-using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
-using Newtonsoft.Json;
-using System.Diagnostics;
 
 namespace TrafficManagementApi.Controllers
 {
@@ -49,7 +42,7 @@ namespace TrafficManagementApi.Controllers
                     ResultCrossroad res = new ResultCrossroad();
                     res.Id_Crossroad = item.Id_Crossroad;
                     res.Id_Priority = priority.Id;
-                    res.Date = DateTime.Now.Date;
+                    res.Date = DateTime.Now;
                     resultCrossroadInstance.AddResult(res);
                 }
                 var sum = 0;
@@ -60,7 +53,7 @@ namespace TrafficManagementApi.Controllers
                 ResultRoute resRoute = new ResultRoute();
                 resRoute.Id_Route = ruta.Id;
                 resRoute.Route_Priority = sum;
-                resRoute.Date = DateTime.Now.Date;
+                resRoute.Date = DateTime.Now;
                 resultRouteInstance.AddResult(resRoute);
                 allRoutesPriorities.Add(resRoute);
             }

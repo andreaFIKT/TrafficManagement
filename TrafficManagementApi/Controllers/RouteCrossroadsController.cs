@@ -33,10 +33,15 @@ namespace TrafficManagementApi.Controllers
                         var routeCrossroad = new RouteCrossroad
                         {
                             Status = ResponseStatus.Success,
-                            Id_Crossroad = Convert.ToInt32(reader["Id_crossroad"]),
+                            Id_Crossroad = Convert.ToDecimal(reader["Id_crossroad"]),
+                            Id_Route = Convert.ToInt32(reader["Id_route"]),
+                            Crossroad_Order = Convert.ToInt32(reader["Crossroad_order"])
+
                         };
                         response.Id_Crossroad = routeCrossroad.Id_Crossroad;
-                        routeCrossroadList.Add(response);
+                        response.Id_Route = routeCrossroad.Id_Route;
+                        response.Crossroad_Order = routeCrossroad.Crossroad_Order;
+                        routeCrossroadList.Add(routeCrossroad);
                     }
                     con.Close();
                 }

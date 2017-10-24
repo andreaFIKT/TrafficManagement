@@ -8,11 +8,8 @@ namespace TrafficManagementApi.Models
     public class Route: BaseResponse
     {
         public int Id { get; set; }
-
-        public string Name{ get; set; }
-
+        public String Name{ get; set; }
         public decimal Id_Start { get; set; }
-
         public decimal Id_End { get; set; }
     }
 }

@@ -8,6 +8,6 @@ namespace TrafficManagementApi.Models
     public class TestResponse : BaseResponse
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public String Name { get; set; }
     }
 }
