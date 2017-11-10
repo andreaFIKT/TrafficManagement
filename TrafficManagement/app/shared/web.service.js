@@ -3,16 +3,12 @@
     'use strict';
     function webService(webEndPoint, serviceRepository, $http) {
         var config = {};
-        function getData() {
-            var arr = 'името-на-контролерот/акцијата'; //currency/GetData;
-            return serviceRepository.get([webEndPoint.baseUrl, arr].join(''), config);
-        }
         function getRouteStarts() {
-            var arr = 'route/GetStarts'; //currency/GetData;
+            var arr = 'route/GetStarts'; 
             return serviceRepository.get([webEndPoint.baseUrl, arr].join(''), config);
         }
         function getRouteEnds() {
-            var arr = 'route/GetEnds'; //currency/GetData;
+            var arr = 'route/GetEnds'; 
             return serviceRepository.get([webEndPoint.baseUrl, arr].join(''), config);
         }
         function calculateRoute(idStart, idEnd) {

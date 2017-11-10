@@ -131,7 +131,6 @@
     <Compile Include="Controllers\CrossroadController.cs" />
     <Compile Include="Controllers\CrossroadParametersController.cs" />
     <Compile Include="Controllers\CrossroadPriorityController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ResultCrossroadController.cs" />
     <Compile Include="Controllers\ResultRouteController.cs" />
     <Compile Include="Controllers\RouteController.cs" />
