@@ -149,7 +149,6 @@
     <Compile Include="Models\ResultRoute.cs" />
     <Compile Include="Models\Route.cs" />
     <Compile Include="Models\RouteCrossroad.cs" />
-    <Compile Include="Models\TestResponse.cs" />
     <Compile Include="Models\TrafficCongestion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

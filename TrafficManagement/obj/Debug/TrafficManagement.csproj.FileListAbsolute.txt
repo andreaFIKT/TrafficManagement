@@ -16,3 +16,9 @@ C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\bin\TrafficManagemen
 C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.csprojResolveAssemblyReference.cache
 C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.dll
 C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.pdb
+C:\Users\LENCHE\Desktop\VII\Безжични и ад-хок компјутерски мрежи\TrafficManagement\TrafficManagement\bin\TrafficManagement.dll.config
+C:\Users\LENCHE\Desktop\VII\Безжични и ад-хок компјутерски мрежи\TrafficManagement\TrafficManagement\bin\TrafficManagement.dll
+C:\Users\LENCHE\Desktop\VII\Безжични и ад-хок компјутерски мрежи\TrafficManagement\TrafficManagement\bin\TrafficManagement.pdb
+C:\Users\LENCHE\Desktop\VII\Безжични и ад-хок компјутерски мрежи\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.csprojResolveAssemblyReference.cache
+C:\Users\LENCHE\Desktop\VII\Безжични и ад-хок компјутерски мрежи\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.dll
+C:\Users\LENCHE\Desktop\VII\Безжични и ад-хок компјутерски мрежи\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.pdb

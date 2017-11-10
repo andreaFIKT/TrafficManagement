@@ -103,5 +103,6 @@ C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagementApi\bin\System.Web.We
 C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagementApi\bin\System.Web.WebPages.Deployment.xml
 C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagementApi\bin\System.Web.WebPages.Razor.xml
 C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagementApi\bin\Antlr3.Runtime.pdb
+C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagementApi\obj\Debug\TrafficManagementApi.csprojResolveAssemblyReference.cache
 C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagementApi\obj\Debug\TrafficManagementApi.dll
 C:\Users\LENCHE\Desktop\TrafficManagement\TrafficManagementApi\obj\Debug\TrafficManagementApi.pdb

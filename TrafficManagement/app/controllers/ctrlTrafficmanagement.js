@@ -2,7 +2,7 @@
 (function () {
     'use strict';
 
-    function ctrlDocumentType($rootScope, $location, webService, $timeout) {
+    function ctrlTrafficManagement($rootScope, $location, webService, $timeout) {
         var vm = this;
 
         function activate() {
