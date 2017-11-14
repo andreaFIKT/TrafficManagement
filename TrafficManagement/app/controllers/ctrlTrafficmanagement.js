@@ -71,6 +71,6 @@
         activate();
     }
 
-    angular.module('app').controller('ctrlDocumentType', ctrlDocumentType);
-    ctrlDocumentType.$inject = ['$rootScope', '$location','webService', '$timeout'];
+    angular.module('app').controller('ctrlTrafficManagement', ctrlTrafficManagement);
+    ctrlTrafficManagement.$inject = ['$rootScope', '$location', 'webService', '$timeout'];
 })();

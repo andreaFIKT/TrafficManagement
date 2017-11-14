@@ -16,7 +16,6 @@
             return serviceRepository.get([webEndPoint.baseUrl,arr,'/' +idStart+'/' +idEnd +'/'].join(''), config);
         }
         var service = {
-            getData: getData,
             getRouteStarts: getRouteStarts,
             getRouteEnds: getRouteEnds,
             calculateRoute: calculateRoute
