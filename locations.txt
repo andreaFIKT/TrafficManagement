@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Skopje",
+    "lat": 41.998988, 
+	"lng": 21.430153, 
+    "label": "1"
+  },
+  {
+    "title": "Skopje",
+    "lat": 41.998813, 
+	"lng": 21.438178,
+    "label": "2"
+  },
+  {
+    "title": "Skopje",
+    "lat": 41.998797, 
+	"lng": 21.440452,
+    "label": "3"
+  },
+  {
+    "title": "Skopje",
+    "lat": 41.996548, 
+	"lng": 21.450065,
+    "label": "4"
+  },
+  {
+    "title": "Skopje",
+    "lat": 41.992988,  
+    "lng": 21.447288,
+    "label": "5"
+  },
+  {
+    "title": "Skopje",
+    "lat": 41.991652, 
+	"lng": 21.445366,
+    "label": "6"
+  },
+  {
+    "title": "Skopje",
+    "lat": 41.994156, 
+	"lng": 21.440903,
+    "label": "7"
+  },
+  {
+    "title": "Skopje",
+    "lat": 41.992101,
+	"lng": 21.437940,
+    "label": "8"
+  },
+  {
+    "title": "Skopje",
+    "lat": 41.993907,
+	"lng": 21.436189,
+    "label": "9"
+  }
+]
