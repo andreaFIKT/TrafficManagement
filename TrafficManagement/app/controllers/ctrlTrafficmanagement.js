@@ -44,7 +44,6 @@
         }
 
         function calculateRoute(idStart, idEnd) {
-
             vm.promise = webService.calculateRoute(idStart, idEnd);
             vm.promise.then(function (response) {
                 if (response.Status === 0) {
@@ -65,7 +64,8 @@
         angular.extend(vm, {
             routeStarts: [],
             routeEnds: [],
-            calculateRoute: calculateRoute               
+            calculateRoute: calculateRoute,
+
         });
         //
         activate();

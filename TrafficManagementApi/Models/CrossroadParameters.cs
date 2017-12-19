@@ -11,5 +11,8 @@ namespace TrafficManagementApi.Models
         public decimal Id_crossroad { get; set; }
         public String Id_pollution { get; set; }
         public String Id_traffic { get; set; }
+        public int Marker_value { get; set; }
+        public decimal Latitude { get; set; }
+        public decimal Longitude { get; set; }
     }
 }

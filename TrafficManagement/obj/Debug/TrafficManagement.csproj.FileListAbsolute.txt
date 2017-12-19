@@ -22,3 +22,9 @@ C:\Users\LENCHE\Desktop\VII\Безжични и ад-хок компјутерс
 C:\Users\LENCHE\Desktop\VII\Безжични и ад-хок компјутерски мрежи\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.csprojResolveAssemblyReference.cache
 C:\Users\LENCHE\Desktop\VII\Безжични и ад-хок компјутерски мрежи\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.dll
 C:\Users\LENCHE\Desktop\VII\Безжични и ад-хок компјутерски мрежи\TrafficManagement\TrafficManagement\obj\Debug\TrafficManagement.pdb
+C:\Users\Martina\Desktop\TrafficManagement-master\TrafficManagement\bin\TrafficManagement.dll.config
+C:\Users\Martina\Desktop\TrafficManagement-master\TrafficManagement\bin\TrafficManagement.dll
+C:\Users\Martina\Desktop\TrafficManagement-master\TrafficManagement\bin\TrafficManagement.pdb
+C:\Users\Martina\Desktop\TrafficManagement-master\TrafficManagement\obj\Debug\TrafficManagement.dll
+C:\Users\Martina\Desktop\TrafficManagement-master\TrafficManagement\obj\Debug\TrafficManagement.pdb
+C:\Users\Martina\Desktop\TrafficManagement-master\TrafficManagement\obj\Debug\TrafficManagement.csprojResolveAssemblyReference.cache
